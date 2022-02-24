@@ -95,7 +95,7 @@ def parse_words(file: str):
             elif '(' in word:
                 word = word.split('(')
 
-            WORDS.append(word)
+            WORDS.append(word[0])
 
 
 def save_fail_load_image(word: str, path_file: str):
@@ -121,5 +121,3 @@ for word in WORDS:
         save_fail_load_image(word=word, path_file=FAIL_LOAD_PATH)
 
         print(f' - error: {exc}')
-
-        break
